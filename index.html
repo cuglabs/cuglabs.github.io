@@ -1,28 +1,18 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+section: blog
+---
 
-<head>
-    <meta charset="utf-8">
-    <title>CUG LABS</title>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<div class='listing col6 pad4h margin3'>
+  {% for item in site.categories.blog limit:1000 %}
+    {% capture date %}{{ item.date | date: '%B %Y' }}{% endcapture %}
+    {% capture ndate %}{{ item.next.date | date: '%B %Y' }}{% endcapture %}
 
-    <style>
-        body {
-            background-color: rgb(237, 237, 237);
-        }
-    </style>
-</head>
+    {% if date != ndate %}
+      <h4 class='month'>{{item.date | date: '%B %Y'}}</h4>
+    {% endif %}
+    <a class='item' href='{{site.baseurl}}{{item.url}}'>{{item.title}} <span class='date'>&#126; {{item.date | date:"%b %d"}}</span></a>
+  {% endfor %}
+</div>
 
-<body>
-    <div class="container-fluid">
-        <div class="page-header">
-            <img class="img-responsive center-block" src="assets/img/logo.png" />
-            <h4 class="text-center">Content Coming Soon</h4>
-            <a href="mailto:geoff.shorts@gmail.com"><h3 class="text-center">Geoff Shorts</h3></a>
-        </div>
-    </div>
-</body>
-
-</html>
+{% include rss-link.html %}
