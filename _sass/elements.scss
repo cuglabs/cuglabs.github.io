@@ -107,7 +107,7 @@ hr {
 // images and figures
 img {
     display: block;
-	max-width: 100%;
+		max-width: 100%;
     width: auto;
     height: auto;
     vertical-align: middle;
@@ -130,6 +130,11 @@ img {
     float: right;
     margin-left: 1em;
     margin-top: 0;
+}
+.img-logo {
+  @media #{$small} {
+    padding-top: 20px;
+  }
 }
 figure {
   margin: 0;
