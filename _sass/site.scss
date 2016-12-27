@@ -70,7 +70,7 @@ body {
 	align-items: center;
 }
 .container {
-	width: 50rem;
+	width: 40rem;
 	max-width: 750px;
 	padding-right: 65px;
 	padding-left: 65px;
@@ -79,7 +79,7 @@ body {
 	color: $color_shark;
 	z-index: 1;
 	border-radius: 3px;
-	//box-shadow: 0 0 10px 0 rgba($color_shark,0.3);
+	box-shadow: 0 0 10px 0 rgba($color_shark,0.3);
 	@include transition(.5s);
 	@media #{$small} {
 		width: 100%;
