@@ -70,10 +70,10 @@ body {
 	align-items: center;
 }
 .container {
-	width: 40rem;
-	max-width: 750px;
-	padding-right: 65px;
-	padding-left: 65px;
+	width: 36rem;
+	max-width: 550px;
+	padding-right: 15px;
+	padding-left: 15px;
 	@include center-block();
 	background-color: $white;
   opacity:  0.95;
@@ -83,7 +83,8 @@ body {
 	box-shadow: 0 0 10px 0 rgba($color_shark,0.3);
 	@include transition(.5s);
 	@media #{$small} {
-		width: 100%;
+    width: 90%;
+		//padding: 2em 0;
 	    box-shadow: none;
 	}
 	@media #{$medium} {
