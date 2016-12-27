@@ -132,6 +132,8 @@ img {
     margin-top: 0;
 }
 .img-logo {
+  padding-left: 20px;
+  padding-right: 20px;
   @media #{$small} {
     padding-top: 20px;
   }
